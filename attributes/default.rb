@@ -24,7 +24,7 @@
 # changed too. It is in the source.rb file, though we recommend
 # overriding attributes by modifying a role, or the node itself.
 # default['nginx']['source']['checksum']
-default['nginx']['version'] = "1.2.6"
+default['nginx']['version'] = "1.4.1"
 default['nginx']['package_name'] = "nginx"
 default['nginx']['dir'] = "/etc/nginx"
 default['nginx']['log_dir'] = "/var/log/nginx"
@@ -70,7 +70,7 @@ default['nginx']['gzip_types']        = [
 ]
 
 default['nginx']['keepalive']          = "on"
-default['nginx']['keepalive_timeout']  = 65
+default['nginx']['keepalive_timeout']  = 75
 default['nginx']['worker_processes']   = node['cpu'] && node['cpu']['total'] ? node['cpu']['total'] : 1
 default['nginx']['worker_connections'] = 1024
 default['nginx']['worker_rlimit_nofile'] = nil
